@@ -1,0 +1,11 @@
+Package: volesModel
+Type: Package
+Title: Simulator and summary statistics for the voles-weasels prey-predator model.
+Version: 0.1
+Date: 2015-10-11
+Author: Matteo Fasiolo and Simon Wood
+Maintainer: Matteo Fasiolo <matteo.fasiolo@gmail.com>
+Description: Framework to perform the simulations on the voles model.
+License: GPL (>=2)
+Depends: Rcpp (>= 0.10.4), synlik
+LinkingTo: Rcpp, RcppArmadillo
