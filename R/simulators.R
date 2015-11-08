@@ -1,9 +1,5 @@
-
-###############
-#### Simulators for voles model (Turchin and Ellner (2000): LIVING ON THE EDGE OF CHAOS: POPULATION DYNAMICS OF FENNOSCANDIAN VOLES)
-###############
 ##### Basic simulator 
-#' Simulates from the voles models of Turchin and Ellner (2000).
+#' Simulates from the voles models of Fasiolo and Wood (2015).
 #' 
 #' @param nObs Length of each simulated time series in months.
 #' @param nsim Number of simulations from the model.
@@ -20,7 +16,11 @@
 #' 
 #' @return A list where [[""voles"]] and [["weasels"]] are two matrices of size nsim by nObs where each row is a trajectory
 #'         simulated from the model.
-#' @references Turchin and Ellner (2000), LIVING ON THE EDGE OF CHAOS: POPULATION DYNAMICS OF FENNOSCANDIAN VOLES.                    
+#' @references  Fasiolo, M and Wood, S. N. (2015). Approximate methods for dynamic ecological models. 
+#'              ArXiv XXX. To appear in the Handbook of Approximate Bayesian Computation.
+#'              
+#' Turchin, P. and S. P. Ellner (2000). Living on the edge of chaos: population
+#' dynamics of fennoscandian voles. Ecology 81 (11), 3099–3116.                    
 #' @author Matteo Fasiolo <matteo.fasiolo@@gmail.com>   
 #' @examples
 #' library(volesModel)
@@ -53,18 +53,6 @@
 #' plot(res[[2]][ii, ], type = 'l', main = "Weasels", ylab = "Weasels", xlab = "Semester")
 #' ii = ii + 1
 #' 
-#' ############# Using full model with synthetic likelihood
-#' # Loading real data
-#' data(voles_data)
-#' 
-#' 
-#' 
-
-#' 
-#' # Loading real dataset
-#' data(voles_data)
-#' 
-#' # Setting 
 #' @export volesSimulator
 #' 
 volesSimulator <- function(param, nsim, nObs, extraArgs = NULL, model = "full", nBurn = 12 * 10, nSteps = 10, T0 = 0, ...)
@@ -97,7 +85,9 @@ volesSimulator <- function(param, nsim, nObs, extraArgs = NULL, model = "full", 
 }
 
 
-### Wrappers used by synlik 
+##### Wrapper used by synlik 
+#' Wrapper for volesSimulator, used to simulated from volesSimulator() within the synlik package.
+#' @export volesWrap
 volesWrap <- function(param, nsim, extraArgs, nObs, ...)
 {
   if( !is.loaded("volesModel") ) library("volesModel")

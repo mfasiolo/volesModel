@@ -1,8 +1,7 @@
 
-####################
-######## VOLES: statistics for the vole model (Turchin)
-####################
-
+##### Wrapper used by synlik 
+#' Summary statistics for the vole model
+#' @export volesStats
 volesStats  <- function(x, extraArgs, ...){
   ## obsData is a vector of observed path
   ## x is a M by n.t matrix of paths, each row of 'x' is a replicate
