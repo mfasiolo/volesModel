@@ -1,6 +1,6 @@
 ---
 title: "Voles prey-predator model"
-output: pdf_document
+output: html_document
 ---
 
 This package contains the voles-weasels prey-predator model described in [Fasiolo and Wood, 2015](http://XXX.com), which
