@@ -1,4 +1,7 @@
-This package contains the voles-weasels prey-predator model described in [Fasiolo and Wood, 2015](http://XXX.com), which
+---
+output: pdf_document
+---
+This package contains the voles-weasels prey-predator model described in [Fasiolo and Wood, 2015](http://arxiv.org/abs/1511.02644), which
 is a modified version of that originally proposed by Turchin and Ellner, 2000.
 The documentation is fairly sparse, but most of the information is contained in the paper.
 
@@ -25,7 +28,7 @@ plot(res[[2]][ii, ], type = 'l', main = "Weasels", ylab = "Weasels", xlab = "Sem
 ii = ii + 1
 ```
 
-The model contains the real dataset described in ([Fasiolo and Wood, 2015](http://XXX.com)),
+The model contains the real dataset described in ([Fasiolo and Wood, 2015](http://arxiv.org/abs/1511.02644)),
 which can be loaded using `data(voles_data)`. 
 To fit the model with Synthetic Likelihood (Wood, 2010), we need to load the [synlik package](https://cran.r-project.org/web/packages/synlik/index.html) and
 then create an object of class `synlik`. Notice that here we use the wrapper `volesWrap`, rather than `volesSimulator`, 
@@ -80,7 +83,7 @@ References
 ----------------------------
   
   * Fasiolo, M and Wood, S. N. (2015). Approximate methods for dynamic ecological models, 
-  ArXiv XXX. To appear in the Handbook of Approximate Bayesian Computation.
+  ArXiv http://arxiv.org/abs/1511.02644. To appear in the Handbook of Approximate Bayesian Computation by S. Sisson, L. Fan, and M. Beaumont.
 
   * Turchin, P. and S. P. Ellner (2000). Living on the edge of chaos: population
 dynamics of fennoscandian voles. Ecology 81 (11), 3099–3116.
