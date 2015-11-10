@@ -1,6 +1,3 @@
----
-output: pdf_document
----
 This package contains the voles-weasels prey-predator model described in [Fasiolo and Wood, 2015](http://arxiv.org/abs/1511.02644), which
 is a modified version of that originally proposed by Turchin and Ellner, 2000.
 The documentation is fairly sparse, but most of the information is contained in the paper.
